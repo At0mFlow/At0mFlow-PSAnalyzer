@@ -54,3 +54,4 @@ if ($script:FailureCount -gt 0) {
 }
 
 Write-Host 'All tests passed.' -ForegroundColor Cyan
+exit 0
