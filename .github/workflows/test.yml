@@ -1,0 +1,49 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / ${{ matrix.shell }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            shell: pwsh
+          - os: windows-latest
+            shell: pwsh
+          - os: windows-latest
+            shell: powershell
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install PSScriptAnalyzer
+        shell: ${{ matrix.shell }}
+        run: Install-Module PSScriptAnalyzer -RequiredVersion 1.25.0 -Scope CurrentUser -Force
+
+      - name: Verify public repository boundary
+        shell: ${{ matrix.shell }}
+        run: ./scripts/Test-PublicBoundary.ps1
+
+      - name: Run tests
+        shell: ${{ matrix.shell }}
+        run: ./tests/Run-Tests.ps1
+
+      - name: Analyse the module and entry point
+        shell: ${{ matrix.shell }}
+        run: >-
+          ./src/Invoke-At0mFlowPSAnalyzer.ps1
+          -Path ./src
+          -Severity Error,Warning
+          -FailOnFindings
