@@ -234,15 +234,27 @@ function Write-At0mFlowPSAnalyzerReport {
 
     process {
         Write-Host ''
-        Write-Host '        .-""""-.' -ForegroundColor Cyan
-        Write-Host '   ____/  ^  ^  \____' -ForegroundColor Cyan
-        Write-Host '  <____|    v    |____>' -ForegroundColor Cyan
-        Write-Host '       |  \___/  |' -ForegroundColor Cyan
-        Write-Host '        \_______/' -ForegroundColor Cyan
-        Write-Host '          /|_|\' -ForegroundColor Blue
-        Write-Host '         /_|_|_\' -ForegroundColor Blue
-        Write-Host '           / \' -ForegroundColor Blue
-        Write-Host '          ORBIT' -ForegroundColor DarkCyan
+        Write-Host '                           .-o-.' -ForegroundColor Green
+        Write-Host '                             |' -ForegroundColor DarkGray
+        Write-Host '                      .------+------.' -ForegroundColor Cyan
+        Write-Host "                 .---'               '---." -ForegroundColor Cyan
+        Write-Host "              .-'      .-----------.      '-." -ForegroundColor White
+        Write-Host '       O=====/   .--. |   /\   /\   | .--.   \=====.' -ForegroundColor Green
+        Write-Host '            /   / GH \|  /__\ /__\  |/    \   \     \' -ForegroundColor Cyan
+        Write-Host '           |    \____/|             |\____/    |     |' -ForegroundColor Cyan
+        Write-Host '           |          |    \___/    |          |     O' -ForegroundColor Green
+        Write-Host "            \         '-------------'         /     /" -ForegroundColor Cyan
+        Write-Host "             '._       .----___----.       _.'     /" -ForegroundColor White
+        Write-Host "                '-----'     | |     '-----'      .'" -ForegroundColor White
+        Write-Host "                         .--' '--.          _..-'" -ForegroundColor DarkGray
+        Write-Host "                        /  .---.  \    _..-'" -ForegroundColor DarkGray
+        Write-Host "                  O===='__/|||||\__'==='" -ForegroundColor Green
+        Write-Host '                           |||||' -ForegroundColor Green
+        Write-Host '                            |||' -ForegroundColor Green
+        Write-Host '                             V' -ForegroundColor Green
+        Write-Host '                            VVV' -ForegroundColor Green
+        Write-Host '                             V' -ForegroundColor Green
+        Write-Host '                           ORBIT' -ForegroundColor DarkCyan
         Write-Host ''
         Write-Host 'At0mFlow PSAnalyzer' -ForegroundColor Cyan
         Write-Host ('Scanned {0} PowerShell file{1} with PSScriptAnalyzer {2}.' -f @(

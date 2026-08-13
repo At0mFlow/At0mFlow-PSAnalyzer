@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/at0mflow-psanalyzer-banner.svg" alt="At0mFlow PSAnalyzer, with Orbit" width="100%">
+  <img src="assets/at0mflow-psanalyzer-banner.png" alt="At0mFlow PSAnalyzer, with the GitHub-themed Orbit mascot" width="100%">
 </p>
 
 <p align="center">
@@ -50,15 +50,27 @@ Use a CI-friendly failure threshold:
 ## What the output looks like
 
 ```text
-        .-""""-.
-   ____/  ^  ^  \____
-  <____|    v    |____>
-       |  \___/  |
-        \_______/
-          /|_|\
-         /_|_|_\
-           / \
-          ORBIT
+                           .-o-.
+                             |
+                      .------+------.
+                 .---'               '---.
+              .-'      .-----------.      '-.
+       O=====/   .--. |   /\   /\   | .--.   \=====.
+            /   / GH \|  /__\ /__\  |/    \   \     \
+           |    \____/|             |\____/    |     |
+           |          |    \___/    |          |     O
+            \         '-------------'         /     /
+             '._       .----___----.       _.'     /
+                '-----'     | |     '-----'      .'
+                         .--' '--.          _..-'
+                        /  .---.  \    _..-'
+                  O===='__/|||||\__'==='
+                           |||||
+                            |||
+                             V
+                            VVV
+                             V
+                           ORBIT
 
 At0mFlow PSAnalyzer
 Scanned 1 PowerShell file with PSScriptAnalyzer 1.25.0.
