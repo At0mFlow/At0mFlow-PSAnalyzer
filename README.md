@@ -50,27 +50,23 @@ Use a CI-friendly failure threshold:
 ## What the output looks like
 
 ```text
-                           .-o-.
-                             |
-                      .------+------.
-                 .---'               '---.
-              .-'      .-----------.      '-.
-       O=====/   .--. |   /\   /\   | .--.   \=====.
-            /   / GH \|  /__\ /__\  |/    \   \     \
-           |    \____/|             |\____/    |     |
-           |          |    \___/    |          |     O
-            \         '-------------'         /     /
-             '._       .----___----.       _.'     /
-                '-----'     | |     '-----'      .'
-                         .--' '--.          _..-'
-                        /  .---.  \    _..-'
-                  O===='__/|||||\__'==='
-                           |||||
-                            |||
-                             V
-                            VVV
-                             V
-                           ORBIT
+========================================================================
+
+       █████╗ ████████╗ ██████╗ ███╗   ███╗███████╗██╗      ██████╗ ██╗    ██╗
+      ██╔══██╗╚══██╔══╝██╔═████╗████╗ ████║██╔════╝██║     ██╔═══██╗██║    ██║
+      ███████║   ██║   ██║██╔██║██╔████╔██║█████╗  ██║     ██║   ██║██║ █╗ ██║
+      ██╔══██║   ██║   ████╔╝██║██║╚██╔╝██║██╔══╝  ██║     ██║   ██║██║███╗██║
+      ██║  ██║   ██║   ╚██████╔╝██║ ╚═╝ ██║██║     ███████╗╚██████╔╝╚███╔███╔╝
+      ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝
+
+                     PowerShell clarity.
+                      Orbit-level control.
+
+                   ANALYSE | CLEAN | MIGRATE | MONITOR
+
+                         https://at0mflow.com
+
+========================================================================
 
 At0mFlow PSAnalyzer
 Scanned 1 PowerShell file with PSScriptAnalyzer 1.25.0.
@@ -80,6 +76,9 @@ Findings: 0 error(s), 2 warning(s), 0 information.
   PSUseApprovedVerbs
   The cmdlet 'Check-ServiceHealth' uses an unapproved verb.
 ```
+
+The wordmark represents the wider At0mFlow platform. This open-source wrapper
+only performs the PSScriptAnalyzer scan and reporting described here.
 
 See the complete checked-in [example output](examples/example-output.txt).
 PSScriptAnalyzer versions can change individual messages or findings.

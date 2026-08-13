@@ -233,28 +233,45 @@ function Write-At0mFlowPSAnalyzerReport {
     )
 
     process {
+        $logoLines = @(
+            '       #####> ########> ######> ###>   ###>#######>##>      ######> ##>    ##>'
+            '      ##<--##>[--##<--]##<-####>####> ####|##<----]##|     ##<---##>##|    ##|'
+            '      #######|   ##|   ##|##<##|##<####<##|#####>  ##|     ##|   ##|##| #> ##|'
+            '      ##<--##|   ##|   ####<]##|##|[##<]##|##<--]  ##|     ##|   ##|##|###>##|'
+            '      ##|  ##|   ##|   [######<]##| [-] ##|##|     #######>[######<][###<###<]'
+            '      [-]  [-]   [-]    [-----] [-]     [-][-]     [------] [-----]  [--][--]'
+        )
+        $logoGlyphs = [ordered] @{
+            '#' = [char] 0x2588
+            '<' = [char] 0x2554
+            '>' = [char] 0x2557
+            '[' = [char] 0x255A
+            ']' = [char] 0x255D
+            '-' = [char] 0x2550
+            '|' = [char] 0x2551
+        }
+
+        Write-Host '========================================================================' -ForegroundColor DarkGray
         Write-Host ''
-        Write-Host '                           .-o-.' -ForegroundColor Green
-        Write-Host '                             |' -ForegroundColor DarkGray
-        Write-Host '                      .------+------.' -ForegroundColor Cyan
-        Write-Host "                 .---'               '---." -ForegroundColor Cyan
-        Write-Host "              .-'      .-----------.      '-." -ForegroundColor White
-        Write-Host '       O=====/   .--. |   /\   /\   | .--.   \=====.' -ForegroundColor Green
-        Write-Host '            /   / GH \|  /__\ /__\  |/    \   \     \' -ForegroundColor Cyan
-        Write-Host '           |    \____/|             |\____/    |     |' -ForegroundColor Cyan
-        Write-Host '           |          |    \___/    |          |     O' -ForegroundColor Green
-        Write-Host "            \         '-------------'         /     /" -ForegroundColor Cyan
-        Write-Host "             '._       .----___----.       _.'     /" -ForegroundColor White
-        Write-Host "                '-----'     | |     '-----'      .'" -ForegroundColor White
-        Write-Host "                         .--' '--.          _..-'" -ForegroundColor DarkGray
-        Write-Host "                        /  .---.  \    _..-'" -ForegroundColor DarkGray
-        Write-Host "                  O===='__/|||||\__'==='" -ForegroundColor Green
-        Write-Host '                           |||||' -ForegroundColor Green
-        Write-Host '                            |||' -ForegroundColor Green
-        Write-Host '                             V' -ForegroundColor Green
-        Write-Host '                            VVV' -ForegroundColor Green
-        Write-Host '                             V' -ForegroundColor Green
-        Write-Host '                           ORBIT' -ForegroundColor DarkCyan
+        foreach ($logoLine in $logoLines) {
+            $renderedLogoLine = $logoLine
+            foreach ($placeholder in $logoGlyphs.Keys) {
+                $renderedLogoLine = $renderedLogoLine.Replace(
+                    $placeholder,
+                    [string] $logoGlyphs[$placeholder]
+                )
+            }
+            Write-Host $renderedLogoLine -ForegroundColor Cyan
+        }
+        Write-Host ''
+        Write-Host '                     PowerShell clarity.' -ForegroundColor White
+        Write-Host '                      Orbit-level control.' -ForegroundColor White
+        Write-Host ''
+        Write-Host '                   ANALYSE | CLEAN | MIGRATE | MONITOR' -ForegroundColor Green
+        Write-Host ''
+        Write-Host '                         https://at0mflow.com' -ForegroundColor DarkCyan
+        Write-Host ''
+        Write-Host '========================================================================' -ForegroundColor DarkGray
         Write-Host ''
         Write-Host 'At0mFlow PSAnalyzer' -ForegroundColor Cyan
         Write-Host ('Scanned {0} PowerShell file{1} with PSScriptAnalyzer {2}.' -f @(

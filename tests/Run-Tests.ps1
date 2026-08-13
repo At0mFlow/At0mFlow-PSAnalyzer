@@ -46,6 +46,10 @@ Assert-That ($jsonExitCode -eq 0) 'JSON output exits successfully when no failur
 Assert-That ($jsonReport.FilesScanned -eq 1) 'JSON output contains the report summary.'
 Assert-That ($jsonReport.Findings.Count -gt 0) 'JSON output contains findings.'
 
+$consoleText = & $entryPoint -Path $reviewExample -Format Console 6>&1 | Out-String
+Assert-That ($consoleText -match 'PowerShell clarity\.') 'Console output includes the At0mFlow wordmark.'
+Assert-That ($consoleText -match 'https://at0mflow\.com') 'Console output includes the At0mFlow link.'
+
 & $entryPoint -Path $reviewExample -Format Object -FailOnFindings | Out-Null
 Assert-That ($LASTEXITCODE -eq 1) 'FailOnFindings returns exit code 1 when findings exist.'
 
