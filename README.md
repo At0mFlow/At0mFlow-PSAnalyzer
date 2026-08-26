@@ -163,6 +163,12 @@ product paths, private configuration formats, credential patterns, unexpected
 source types and an incorrect Git remote before changes are pushed. See
 [PUBLIC_BOUNDARY.md](PUBLIC_BOUNDARY.md) for the exact controls.
 
+## Other public At0mFlow tools
+
+- [At0mFlow Uptime Monitor](https://github.com/At0mFlow/At0mFlow-UptimeMonitor)
+  checks HTTP and HTTPS endpoints from PowerShell with readable console,
+  object, JSON and CSV output.
+
 ## Contributing
 
 Issues and focused pull requests are welcome. Please read
