@@ -165,6 +165,9 @@ source types and an incorrect Git remote before changes are pushed. See
 
 ## Other public At0mFlow tools
 
+- [At0mFlow Script Audit](https://github.com/At0mFlow/At0mFlow-ScriptAudit)
+  collects custom PowerShell scripts and scheduled-task context into one
+  reviewable folder tree.
 - [At0mFlow Uptime Monitor](https://github.com/At0mFlow/At0mFlow-UptimeMonitor)
   checks HTTP and HTTPS endpoints from PowerShell with readable console,
   object, JSON and CSV output.
