@@ -171,6 +171,9 @@ source types and an incorrect Git remote before changes are pushed. See
 - [At0mFlow Uptime Monitor](https://github.com/At0mFlow/At0mFlow-UptimeMonitor)
   checks HTTP and HTTPS endpoints from PowerShell with readable console,
   object, JSON and CSV output.
+- [At0mFlow RepoSync](https://github.com/At0mFlow/At0mFlow-RepoSync) safely
+  commits and optionally pushes explicit paths from an existing Git working
+  tree.
 
 ## Contributing
 
