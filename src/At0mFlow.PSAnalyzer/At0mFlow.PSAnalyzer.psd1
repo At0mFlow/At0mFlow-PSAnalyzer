@@ -1,6 +1,6 @@
 @{
     RootModule        = 'At0mFlow.PSAnalyzer.psm1'
-    ModuleVersion     = '1.0.0'
+    ModuleVersion     = '1.0.1'
     GUID              = 'c846781f-c036-4a58-8bcc-20430daf4127'
     Author            = 'At0mFlow'
     CompanyName       = 'At0mFlow'

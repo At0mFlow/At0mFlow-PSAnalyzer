@@ -1,5 +1,3 @@
-==================================================================================================
-
                                                   @@@@@@
                                                  @@=::=%@
                                                  @@=--=%@
@@ -46,31 +44,3 @@
                                                 -------==
                                                 -==--====
                                                   =====
-
-       █████╗ ████████╗ ██████╗ ███╗   ███╗███████╗██╗      ██████╗ ██╗    ██╗
-      ██╔══██╗╚══██╔══╝██╔═████╗████╗ ████║██╔════╝██║     ██╔═══██╗██║    ██║
-      ███████║   ██║   ██║██╔██║██╔████╔██║█████╗  ██║     ██║   ██║██║ █╗ ██║
-      ██╔══██║   ██║   ████╔╝██║██║╚██╔╝██║██╔══╝  ██║     ██║   ██║██║███╗██║
-      ██║  ██║   ██║   ╚██████╔╝██║ ╚═╝ ██║██║     ███████╗╚██████╔╝╚███╔███╔╝
-      ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝
-
-                     PowerShell clarity.
-                      Orbit-level control.
-
-                   ANALYSE | CLEAN | MIGRATE | MONITOR
-
-                         https://at0mflow.com
-
-==================================================================================================
-
-At0mFlow PSAnalyzer
-Scanned 1 PowerShell file with PSScriptAnalyzer 1.25.0.
-Findings: 0 error(s), 2 warning(s), 0 information.
-
-[WARNING] examples/NeedsReview.ps1:1:10
-  PSUseApprovedVerbs
-  The cmdlet 'Check-ServiceHealth' uses an unapproved verb.
-
-[WARNING] examples/NeedsReview.ps1:6:5
-  PSAvoidUsingWriteHost
-  File 'NeedsReview.ps1' uses Write-Host. Avoid using Write-Host because it might not work in all hosts, does not work when there is no host, and (prior to PS 5.0) cannot be suppressed, captured, or redirected. Instead, use Write-Output, Write-Verbose, or Write-Information.
